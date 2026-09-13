@@ -1,7 +1,5 @@
 package io.github.cursodsousa.arquiteturaspring.montadora;
 
-import java.awt.*;
-
 import static io.github.cursodsousa.arquiteturaspring.montadora.Montadora.HONDA;
 import static java.awt.Color.BLACK;
 

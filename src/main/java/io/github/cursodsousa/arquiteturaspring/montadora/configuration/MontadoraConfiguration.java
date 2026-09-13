@@ -8,8 +8,30 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MontadoraConfiguration {
 
-    @Bean
-    public Motor motor() {
+    @Bean(name = "motorEletrico")
+    public Motor motorEletrico() {
+        Motor motor     = new Motor();
+        motor.setCavalos(110);
+        motor.setCilindros(3);
+        motor.setModelo("TH-40");
+        motor.setLitragem(1.4);
+        motor.setTipo(TipoMotor.ELETRICO);
+        return motor;
+    }
+
+    @Bean(name = "motorTurbo")
+    public Motor motorTurbo() {
+        Motor motor     = new Motor();
+        motor.setCavalos(180);
+        motor.setCilindros(4);
+        motor.setModelo("XPTO-01");
+        motor.setLitragem(1.5);
+        motor.setTipo(TipoMotor.TURBO);
+        return motor;
+    }
+
+    @Bean(name = "motorAspirado")
+    public Motor motorAspirado() {
         Motor motor     = new Motor();
         motor.setCavalos(120);
         motor.setCilindros(4);
